@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qs8l#*8qdp5%z#)*u(lsndx5ggp%14mkt0u2v6g-m@)x8_3$$l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # DEBUG = FALSE
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -84,13 +84,13 @@ WSGI_APPLICATION = 'pystagram.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE' : 'django.db.backends.mysql',
-        # 'NAME' : 'testdb',
-        # 'HOST' : 'jarangweb.cdg0zxrzuzei.ap-northeast-1.rds.amazonaws.com:3306'
-        # 'USER' : 'jarang',
-        # 'PASSWORD' : os.environ.get('PYSTAGRAM_DB_PW'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'testdb',
+        'HOST' : 'jarangweb.cdg0zxrzuzei.ap-northeast-1.rds.amazonaws.com:3306'
+        'USER' : 'jarang',
+        'PASSWORD' : os.environ.get('PYSTAGRAM_DB_PW'),
     }
 }
 

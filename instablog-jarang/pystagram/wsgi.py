@@ -10,6 +10,8 @@ if env:
 else:
 	env = 'settings'
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pystagram.settings")
+os.environ.setdefault(
+	"DJANGO_SETTINGS_MODULE", "pystagram.{}".format(env)
+)
 
 application = get_wsgi_application()
